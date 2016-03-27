@@ -14,12 +14,21 @@ class Contact: CustomStringConvertible {
     var lastName: String
     var email: String
     var cell: String
+
+    init(firstName: String, lastName: String, email: String, cell: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.cell = cell
+    }
     
-    init(contactDictionary: NSDictionary) {
-        firstName = (contactDictionary["firstName"] ?? "") as! String
-        lastName = (contactDictionary["lastName"] ?? "") as! String
-        email = (contactDictionary["email"] ?? "") as! String
-        cell = (contactDictionary["cell"] ?? "") as! String
+    convenience init(contactDictionary: NSDictionary) {
+        self.init(
+            firstName: (contactDictionary["firstName"] ?? "") as! String,
+            lastName: (contactDictionary["lastName"] ?? "") as! String,
+            email: (contactDictionary["email"] ?? "") as! String,
+            cell: (contactDictionary["cell"] ?? "") as! String
+        )
     }
     
     var description: String {
