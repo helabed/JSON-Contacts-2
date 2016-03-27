@@ -9,7 +9,7 @@
 import Foundation
 
 class Contact: CustomStringConvertible {
-    
+
     var firstName: String
     var lastName: String
     var email: String
@@ -21,7 +21,7 @@ class Contact: CustomStringConvertible {
         self.email = email
         self.cell = cell
     }
-    
+
     convenience init(contactDictionary: NSDictionary) {
         self.init(
             firstName: (contactDictionary["firstName"] ?? "") as! String,
@@ -30,7 +30,7 @@ class Contact: CustomStringConvertible {
             cell: (contactDictionary["cell"] ?? "") as! String
         )
     }
-    
+
     var description: String {
         return "\(firstName) \(lastName), \(email), \(cell)\n"
     }
@@ -41,27 +41,27 @@ class MyContacts: CustomStringConvertible {
     var jsonData: NSData
     var jsonArray: NSArray
     var contactsArray: [Contact]
-    
+
     var description: String {
         var descriptionBuffer : String = ""
-        
+
         for contact in contactsArray {
             descriptionBuffer.appendContentsOf(contact.description)
         }
-        
+
         return descriptionBuffer
     }
-    
+
     init() {
         jsonData = NSData()
         jsonArray = []
         contactsArray = []
     }
-    
+
     func loadJSONContactsWithFileName(fileName: String) {
-        
+
         let jsonURL = NSBundle.mainBundle().URLForResource(fileName, withExtension: "js")
-        
+
         if let urlCheck = jsonURL {
             jsonData = NSData(contentsOfURL: urlCheck)!
         }
@@ -72,15 +72,15 @@ class MyContacts: CustomStringConvertible {
             jsonArray = []
         }
 
-        
+
         // in class teacher added try!
 //        let jsonArray2 : NSArray = try! NSJSONSerialization.JSONObjectWithData(jsonData,
 //            options: NSJSONReadingOptions.MutableContainers) as! NSArray
 
-    
-    
+
+
     }
-    
+
     func createJSONDictionary() {
         for json in jsonArray {
             let dictionary = json as! NSDictionary
