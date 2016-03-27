@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var contactsTextView: UITextView!
+
+    var contacts = MyContacts()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        contacts.loadJSONContactsWithFileName("json-contacts")
+        contacts.createJSONDictionary()
+        contactsTextView.text = contacts.description
     }
 
     override func didReceiveMemoryWarning() {
