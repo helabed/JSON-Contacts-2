@@ -15,6 +15,7 @@ class AddNewContactViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var cellPhoneTextField: UITextField!
 
+    var contacts: MyContacts?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,14 @@ class AddNewContactViewController: UIViewController {
 
 
     @IBAction func doneButtonTapped(sender: UIBarButtonItem) {
+        let first = firstNameTextField.text
+        let last = lastNameTextField.text
+        let email = emailTextField.text
+        let phone = cellPhoneTextField.text
+
+        contacts!.addNewContact(first!, lastName: last!, email: email!, cell: phone!)
+
+        navigationController?.popViewControllerAnimated(true)
     }
     /*
     // MARK: - Navigation

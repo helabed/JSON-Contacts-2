@@ -23,11 +23,25 @@ class ViewController: UIViewController {
         contactsTextView.text = contacts.description
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        contactsTextView.text = contacts.description
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - Navigation
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if segue.identifier == "showAddContact" {
+            let addController = segue.destinationViewController as! AddNewContactViewController
+            addController.contacts = contacts
+        }
+    }
 }
 
