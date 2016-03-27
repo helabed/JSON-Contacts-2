@@ -89,12 +89,14 @@ class MyContacts: CustomStringConvertible {
         }
     }
 
-
-    func addNewContact(firstName: String, lastName: String, email: String, cell: String) {
-        contactsArray.append(Contact(firstName: firstName, lastName: lastName, email: email, cell: cell))
+    func sortByFirstNameThenLastName() {
         contactsArray.sortInPlace({
             "\($0.firstName)\($0.lastName)" < "\($1.firstName)\($1.lastName)"
         })
+    }
+    func addNewContact(firstName: String, lastName: String, email: String, cell: String) {
+        contactsArray.append(Contact(firstName: firstName, lastName: lastName, email: email, cell: cell))
+        sortByFirstNameThenLastName()
     }
 
 }

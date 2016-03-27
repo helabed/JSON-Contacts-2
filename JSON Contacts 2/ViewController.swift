@@ -20,12 +20,14 @@ class ViewController: UIViewController {
 
         contacts.loadJSONContactsWithFileName("json-contacts")
         contacts.createJSONDictionary()
+        contacts.sortByFirstNameThenLastName()
         contactsTextView.text = contacts.description
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
+        contacts.sortByFirstNameThenLastName()
         contactsTextView.text = contacts.description
     }
 
