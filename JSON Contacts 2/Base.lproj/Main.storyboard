@@ -59,7 +59,43 @@
                     <view key="view" contentMode="scaleToFill" id="AWC-Ey-vr6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sAN-IY-4jf">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9k-fJ-6WP">
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OS8-3y-gEA">
+                                <rect key="frame" x="20" y="148" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="606-oj-olq">
+                                <rect key="frame" x="20" y="186" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="606-oj-olq" firstAttribute="top" secondItem="OS8-3y-gEA" secondAttribute="bottom" constant="8" symbolic="YES" id="0Mt-DD-aol"/>
+                            <constraint firstItem="sAN-IY-4jf" firstAttribute="trailing" secondItem="h9k-fJ-6WP" secondAttribute="trailing" id="4ND-dY-Joe"/>
+                            <constraint firstItem="sAN-IY-4jf" firstAttribute="leading" secondItem="h9k-fJ-6WP" secondAttribute="leading" id="JyV-Ie-QV2"/>
+                            <constraint firstItem="606-oj-olq" firstAttribute="leading" secondItem="AWC-Ey-vr6" secondAttribute="leadingMargin" id="NYH-UC-kcq"/>
+                            <constraint firstItem="sAN-IY-4jf" firstAttribute="top" secondItem="s6H-vZ-h28" secondAttribute="bottom" constant="8" symbolic="YES" id="a5s-ih-Qf6"/>
+                            <constraint firstItem="h9k-fJ-6WP" firstAttribute="top" secondItem="sAN-IY-4jf" secondAttribute="bottom" constant="8" symbolic="YES" id="aRO-qY-6gZ"/>
+                            <constraint firstItem="OS8-3y-gEA" firstAttribute="trailing" secondItem="h9k-fJ-6WP" secondAttribute="trailing" id="hmD-CU-e1O"/>
+                            <constraint firstItem="h9k-fJ-6WP" firstAttribute="leading" secondItem="OS8-3y-gEA" secondAttribute="leading" id="nKZ-62-fCS"/>
+                            <constraint firstItem="sAN-IY-4jf" firstAttribute="trailing" secondItem="AWC-Ey-vr6" secondAttribute="trailingMargin" id="p7z-45-e2K"/>
+                            <constraint firstItem="606-oj-olq" firstAttribute="trailing" secondItem="OS8-3y-gEA" secondAttribute="trailing" id="rgb-lo-86I"/>
+                            <constraint firstItem="OS8-3y-gEA" firstAttribute="leading" secondItem="606-oj-olq" secondAttribute="leading" id="t6I-mr-SxP"/>
+                            <constraint firstItem="OS8-3y-gEA" firstAttribute="top" secondItem="h9k-fJ-6WP" secondAttribute="bottom" constant="8" symbolic="YES" id="zrn-W7-Nyu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Contact" id="023-BF-9Mq">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="LzG-Q4-BBf"/>
