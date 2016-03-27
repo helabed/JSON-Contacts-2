@@ -14,6 +14,7 @@
 		7380ED861CA385F10095F51E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7380ED841CA385F10095F51E /* LaunchScreen.storyboard */; };
 		7380ED8E1CA3862E0095F51E /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7380ED8D1CA3862E0095F51E /* Contacts.swift */; };
 		7380ED901CA386430095F51E /* json-contacts.js in Resources */ = {isa = PBXBuildFile; fileRef = 7380ED8F1CA386430095F51E /* json-contacts.js */; };
+		739D5AB41CA84182002C4934 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D5AB31CA84182002C4934 /* AddNewContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7380ED871CA385F10095F51E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7380ED8D1CA3862E0095F51E /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		7380ED8F1CA386430095F51E /* json-contacts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "json-contacts.js"; sourceTree = "<group>"; };
+		739D5AB31CA84182002C4934 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				7380ED7B1CA385F10095F51E /* AppDelegate.swift */,
 				7380ED7D1CA385F10095F51E /* ViewController.swift */,
+				739D5AB31CA84182002C4934 /* AddNewContactViewController.swift */,
 				7380ED8D1CA3862E0095F51E /* Contacts.swift */,
 				7380ED7F1CA385F10095F51E /* Main.storyboard */,
 				7380ED821CA385F10095F51E /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			files = (
 				7380ED7E1CA385F10095F51E /* ViewController.swift in Sources */,
 				7380ED7C1CA385F10095F51E /* AppDelegate.swift in Sources */,
+				739D5AB41CA84182002C4934 /* AddNewContactViewController.swift in Sources */,
 				7380ED8E1CA3862E0095F51E /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

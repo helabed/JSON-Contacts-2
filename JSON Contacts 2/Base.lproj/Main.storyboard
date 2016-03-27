@@ -51,7 +51,7 @@
         <!--Add New Contact-->
         <scene sceneID="kDv-fS-OuS">
             <objects>
-                <viewController id="VHg-cH-dp2" sceneMemberID="viewController">
+                <viewController id="VHg-cH-dp2" customClass="AddNewContactViewController" customModule="JSON_Contacts_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s6H-vZ-h28"/>
                         <viewControllerLayoutGuide type="bottom" id="HKQ-AL-05t"/>
@@ -98,8 +98,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Contact" id="023-BF-9Mq">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="LzG-Q4-BBf"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="LzG-Q4-BBf">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="VHg-cH-dp2" id="tT1-Cr-hC4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cellPhoneTextField" destination="606-oj-olq" id="aEn-wI-xxe"/>
+                        <outlet property="emailTextField" destination="OS8-3y-gEA" id="gOb-fx-w5g"/>
+                        <outlet property="firstNameTextField" destination="sAN-IY-4jf" id="73R-yC-bBe"/>
+                        <outlet property="lastNameTextField" destination="h9k-fJ-6WP" id="GwG-jS-QQ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyO-W1-AGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
