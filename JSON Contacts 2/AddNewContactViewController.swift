@@ -35,6 +35,19 @@ class AddNewContactViewController: UIViewController {
         let email = emailTextField.text
         let phone = cellPhoneTextField.text
 
+        //week 11
+
+        if first!.isEmpty {
+            print("No First Name")
+            firstNameTextField.becomeFirstResponder()
+            return
+        }
+
+        if last!.isEmpty {
+            print("No Last Name")
+            lastNameTextField.becomeFirstResponder()
+            return
+        }
         contacts!.addNewContact(first!, lastName: last!, email: email!, cell: phone!)
 
         navigationController?.popViewControllerAnimated(true)
