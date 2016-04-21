@@ -15,6 +15,8 @@
 		7380ED8E1CA3862E0095F51E /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7380ED8D1CA3862E0095F51E /* Contacts.swift */; };
 		7380ED901CA386430095F51E /* json-contacts.js in Resources */ = {isa = PBXBuildFile; fileRef = 7380ED8F1CA386430095F51E /* json-contacts.js */; };
 		739D5AB41CA84182002C4934 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D5AB31CA84182002C4934 /* AddNewContactViewController.swift */; };
+		73F1689D1CBB1D2B00A3A330 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F1689C1CBB1D2B00A3A330 /* ContactsTableViewController.swift */; };
+		73F168A11CBB3B1300A3A330 /* 1000_contacts.js in Resources */ = {isa = PBXBuildFile; fileRef = 73F168A01CBB3B1300A3A330 /* 1000_contacts.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		7380ED8D1CA3862E0095F51E /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		7380ED8F1CA386430095F51E /* json-contacts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "json-contacts.js"; sourceTree = "<group>"; };
 		739D5AB31CA84182002C4934 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
+		73F1689C1CBB1D2B00A3A330 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		73F168A01CBB3B1300A3A330 /* 1000_contacts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = 1000_contacts.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +66,14 @@
 			children = (
 				7380ED7B1CA385F10095F51E /* AppDelegate.swift */,
 				7380ED7D1CA385F10095F51E /* ViewController.swift */,
+				73F1689C1CBB1D2B00A3A330 /* ContactsTableViewController.swift */,
 				739D5AB31CA84182002C4934 /* AddNewContactViewController.swift */,
 				7380ED8D1CA3862E0095F51E /* Contacts.swift */,
 				7380ED7F1CA385F10095F51E /* Main.storyboard */,
 				7380ED821CA385F10095F51E /* Assets.xcassets */,
 				7380ED841CA385F10095F51E /* LaunchScreen.storyboard */,
 				7380ED8F1CA386430095F51E /* json-contacts.js */,
+				73F168A01CBB3B1300A3A330 /* 1000_contacts.js */,
 				7380ED871CA385F10095F51E /* Info.plist */,
 			);
 			path = "JSON Contacts 2";
@@ -131,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F168A11CBB3B1300A3A330 /* 1000_contacts.js in Resources */,
 				7380ED861CA385F10095F51E /* LaunchScreen.storyboard in Resources */,
 				7380ED901CA386430095F51E /* json-contacts.js in Resources */,
 				7380ED831CA385F10095F51E /* Assets.xcassets in Resources */,
@@ -147,6 +154,7 @@
 			files = (
 				7380ED7E1CA385F10095F51E /* ViewController.swift in Sources */,
 				7380ED7C1CA385F10095F51E /* AppDelegate.swift in Sources */,
+				73F1689D1CBB1D2B00A3A330 /* ContactsTableViewController.swift in Sources */,
 				739D5AB41CA84182002C4934 /* AddNewContactViewController.swift in Sources */,
 				7380ED8E1CA3862E0095F51E /* Contacts.swift in Sources */,
 			);

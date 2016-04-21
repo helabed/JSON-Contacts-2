@@ -11,7 +11,7 @@ import UIKit
 class ContactsTableViewController: UITableViewController {
 
     var contacts = MyContacts()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,10 +23,10 @@ class ContactsTableViewController: UITableViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         tableView.reloadData()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,25 +41,30 @@ class ContactsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return contacts.count
+        // first section is section == 0  (0 based section numbering)
+        if section == 0 {
+            return contacts.count
+        } else {
+            return 0
+        }
     }
 
-    
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell",
                                                                forIndexPath: indexPath)
-        
+
         // Configure the cell...
         let contact = contacts.contactWithIndex(indexPath.row)
         print(contact)
         cell.textLabel?.text = contact.fullName
         cell.detailTextLabel?.text = contact.emailCell
-        
+
         return cell
     }
-    
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,7 +82,7 @@ class ContactsTableViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
@@ -96,19 +101,19 @@ class ContactsTableViewController: UITableViewController {
     }
     */
 
-    
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
+
         if segue.identifier == "showAddContact" {
             let addController = segue.destinationViewController as! AddNewContactViewController
             addController.contacts = contacts
         }
     }
-    
+
 
 }

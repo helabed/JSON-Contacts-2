@@ -34,6 +34,18 @@ class Contact: CustomStringConvertible {
     var description: String {
         return "\(firstName) \(lastName), \(email), \(cell)\n"
     }
+
+    var fullName: String {
+        return "\(firstName) \(lastName)"
+    }
+
+    var emailCell: String {
+        return "\(email), cell: \(cell)"
+    }
+
+    convenience init() {
+        self.init(firstName: "", lastName: "", email: "", cell: "")
+    }
 }
 
 
@@ -99,4 +111,11 @@ class MyContacts: CustomStringConvertible {
         sortByFirstNameThenLastName()
     }
 
+    var count: Int {
+        return contactsArray.count
+    }
+
+    func contactWithIndex(index: Int) -> Contact {
+        return contactsArray[index] ?? Contact()
+    }
 }
