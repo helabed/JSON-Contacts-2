@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		735A90BB1CC860D000E4F5E6 /* ShowContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A90BA1CC860D000E4F5E6 /* ShowContactTableViewController.swift */; };
 		7380ED7C1CA385F10095F51E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7380ED7B1CA385F10095F51E /* AppDelegate.swift */; };
 		7380ED7E1CA385F10095F51E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7380ED7D1CA385F10095F51E /* ViewController.swift */; };
 		7380ED811CA385F10095F51E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7380ED7F1CA385F10095F51E /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		735A90BA1CC860D000E4F5E6 /* ShowContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowContactTableViewController.swift; sourceTree = "<group>"; };
 		7380ED781CA385F10095F51E /* JSON Contacts 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSON Contacts 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7380ED7B1CA385F10095F51E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7380ED7D1CA385F10095F51E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				7380ED7D1CA385F10095F51E /* ViewController.swift */,
 				73F1689C1CBB1D2B00A3A330 /* ContactsTableViewController.swift */,
 				739D5AB31CA84182002C4934 /* AddNewContactViewController.swift */,
+				735A90BA1CC860D000E4F5E6 /* ShowContactTableViewController.swift */,
 				7380ED8D1CA3862E0095F51E /* Contacts.swift */,
 				7380ED7F1CA385F10095F51E /* Main.storyboard */,
 				7380ED821CA385F10095F51E /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7380ED7E1CA385F10095F51E /* ViewController.swift in Sources */,
+				735A90BB1CC860D000E4F5E6 /* ShowContactTableViewController.swift in Sources */,
 				7380ED7C1CA385F10095F51E /* AppDelegate.swift in Sources */,
 				73F1689D1CBB1D2B00A3A330 /* ContactsTableViewController.swift in Sources */,
 				739D5AB41CA84182002C4934 /* AddNewContactViewController.swift in Sources */,

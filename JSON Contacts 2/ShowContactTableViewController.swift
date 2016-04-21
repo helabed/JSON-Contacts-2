@@ -1,30 +1,37 @@
 //
-//  ContactsTableViewController.swift
+//  ShowContactTableViewController.swift
 //  JSON Contacts 2
 //
-//  Created by hani elabed on 4/10/16.
+//  Created by Hani Elabed on 4/20/16.
 //  Copyright © 2016 Hani Elabed. All rights reserved.
 //
 
 import UIKit
 
-class ContactsTableViewController: UITableViewController {
+class ShowContactTableViewController: UITableViewController {
 
-    var contacts = MyContacts()
-
+    @IBOutlet weak var firstNameCell: UITableViewCell!
+    @IBOutlet weak var lastNameCell: UITableViewCell!
+    @IBOutlet weak var emailCell: UITableViewCell!
+    @IBOutlet weak var phoneCell: UITableViewCell!
+    
+    var contact: Contact?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        contacts.loadJSONContactsWithFileName("1000_contacts")
-        //contacts.loadJSONContactsWithFileName("json-contacts")
-        contacts.createJSONDictionary()
-        contacts.sortByFirstNameThenLastName()
+        
+        
+        firstNameCell.textLabel?.text = contact?.firstName
+        lastNameCell.textLabel?.text = contact?.lastName
+        emailCell.textLabel?.text = contact?.email
+        phoneCell.textLabel?.text = contact?.cell
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
-    }
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-
-        tableView.reloadData()
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,38 +40,26 @@ class ContactsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+/*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        // first section is section == 0  (0 based section numbering)
-        if section == 0 {
-            return contacts.count
-        } else {
-            return 0
-        }
+        return 0
     }
-
-
+*/
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell",
-                                                               forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
-        let contact = contacts.contactWithIndex(indexPath.row)
-        print(contact)
-        cell.textLabel?.text = contact.fullName
-        cell.detailTextLabel?.text = contact.emailCell
 
         return cell
     }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,7 +77,7 @@ class ContactsTableViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        }    
     }
     */
 
@@ -101,23 +96,14 @@ class ContactsTableViewController: UITableViewController {
     }
     */
 
-
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-
-        if segue.identifier == "showAddContact" {
-            let addController = segue.destinationViewController as! AddNewContactViewController
-            addController.contacts = contacts
-        } else if segue.identifier == "showContact" {
-            let showController = segue.destinationViewController as! ShowContactTableViewController
-            let selectedRow = tableView.indexPathForSelectedRow?.row ?? 0
-            showController.contact = contacts.contactWithIndex(selectedRow)
-        }
     }
-
+    */
 
 }
